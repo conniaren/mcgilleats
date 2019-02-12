@@ -1,0 +1,193 @@
+<html lang="en">
+
+  <head>
+    <title>i don't know where to eat</title>
+    <meta name="i don't know where to eat" content="For students facing mealtime decision anxiety and paralysis.">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/d5665a87-f5c4-4360-a361-b081666726af%2Ffavicon.ico?1532722423007" type="image/x-icon">
+    <meta charset="utf-8">    
+    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script src="script.js" ></script>
+  <script src="jquery.spritely.js"></script>
+  <script src="jquery.backgroundPosition.js"></script>
+    
+    <!-- "spin" -->
+   <script>
+     	  var things = ['RVC', 
+                      'New Rez',
+                      'CarreFour',
+                      'Douglas',
+                      'BMH',
+                      'Quesada',
+                      'Vinhs',
+                      'McConnell Cafe',
+                      'Premiere Moisson',
+                      'Paramount',
+                      'Subway',
+                      'Second Cup',
+                      'Starbucks',
+                      'Soupe Cafe'];
+      
+     
+     function start() {     
+       var i = 0;
+        interval = setInterval(function () {  
+             var ele = document.getElementById('myBlinkingDiv');
+              ele.innerHTML = things[i];
+             i = Math.floor(Math.random()*things.length); 
+           },100);
+       }
+     function disableSpin() {
+       clearInterval(interval) 
+     var ele = document.getElementById('myBlinkingDiv');
+              ele.innerHTML = "you should eat at" ;}
+     function disableStart(){
+            document.getElementById("control").disabled = true; }
+
+     
+    </script>   
+  <!-- -->
+    
+  </head>
+ <body bgcolor="#EEE6FF"> 
+   
+       <img src="https://cdn.glitch.com/cc90f7d9-0135-4dd0-a27e-a240c7c6e5ae%2Ftenor.gif?1549794063540" alt="eating" style="width:220px;height:165px;margin-top:15px;" >
+<br/>
+  <div class="intro" align="center"> 
+      <br/> can't decide where to eat? <br/> let us decide for you! <br/>  we won't disappoint ;)
+  </div>       
+
+      
+        
+ <div>
+     <button class="button" id="control" onclick="start();disableStart()" style="margin-top:17px" >Start</button>
+   <div id="myBlinkingDiv" class="display" ></div>    
+ </div>  
+  
+    
+ <!--   
+    <div>
+<input type="button" onclick="start();" value="Start"/>
+  <div id="myBlinkingDiv"></div>    </div>
+  -->          
+    
+     
+<!-- -------- -->         
+<div>
+   
+ 
+  <ul id="myList" class="nobull">
+  </ul>
+ 
+<script>
+  var things = ['RVC','New Rez','CarreFour','Douglas','BMH','Quesada','Vinhs','McConnell Cafe','Premiere Moisson','Paramount','Subway','Second Cup','Starbucks','Soupe Cafe'];  
+  var links = ['https://goo.gl/maps/wpJPwvLGXJQ2','https://goo.gl/maps/PwQ5DmMbAv42','https://goo.gl/maps/WrNQDPPdmHz','https://goo.gl/maps/eqrRkqdjVZS2','https://goo.gl/maps/BPEnHPEwUM32','https://goo.gl/maps/9dnWJfrN8NK2','https://goo.gl/maps/8Qv12xm7R2S2','https://goo.gl/maps/DnB1TP23uWD2','https://goo.gl/maps/o4Bq1E4VhHE2','https://goo.gl/maps/mRbM43ZEVBu','https://goo.gl/maps/wUZQKp73nhS2','https://goo.gl/maps/qVF6tzR17Nv','https://goo.gl/maps/NEhv7a9pV362','https://goo.gl/maps/J71hgnetKd62'];
+
+function myFunctionn() {
+    /* var node = document.createElement("LI");
+    var textnode = document.createTextNode(myFunction());
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node); */
+    
+    var link = document.createElement('a');
+    var index=myFunction();
+    link.textContent = things[index];
+    link.href = links[index];
+    document.getElementById('myList').appendChild(link);
+  
+  }
+  function disable() {
+    document.getElementById("myBtn").disabled = true;
+        document.getElementById("control").disabled = true;
+  }
+  function myFunction() {
+	  var thing = Math.floor(Math.random()*things.length);
+    return thing; 
+    /* var h = document.createElement("p");
+	  var t = document.createTextNode(thing);
+	  h.appendChild(t);
+	  document.body.appendChild(h); */
+	}            
+
+</script>
+       
+<style type="text/css">
+  
+ul.nobull {
+list-style-type: none;
+margin: 0 auto;
+margin-top: 10px;
+padding: 0px;
+font-family: "Courier New", Courier, monospace;
+color: #8B8C9D;
+font-size:60px;
+text-align: center;
+font-weight: normal;
+}
+</style> 
+      
+</div> 
+  
+
+<div class="button">
+  <button class="button" id="myBtn" onclick="myFunctionn(); disable(); disableSpin()" style="margin-top:10px">leMme eAt</button> 
+</div>  
+<!-- -------- -->   
+
+   <!--
+<div class="container" style="margin-top:35px" >
+		<div class="slot-wrapper"></div> 
+			<div id="slot1" class="slot"> 
+      </div>
+		    <div class="clear"></div>
+</div>   --> 
+  
+   
+   <script>
+  function showPicture() {
+  var sourceOfPicture = "https://cdn.glitch.com/cc90f7d9-0135-4dd0-a27e-a240c7c6e5ae%2FIndelibleAliveAmericancrow-max-1mb.gif?1549808483293";
+  var img = document.getElementById('bigpic')
+  img.src = sourceOfPicture.replace('90x90', '225x225');
+  img.style.display = "block";} 
+    
+  function showPicturee() {
+  var sourceOfPicture = "https://cdn.glitch.com/cc90f7d9-0135-4dd0-a27e-a240c7c6e5ae%2Ftenor%20(2).gif?1549818773390";
+  var img = document.getElementById('kermit')
+  img.src = sourceOfPicture.replace('90x90', '225x225');
+  img.style.display = "block"; }
+    
+     function disableHate(){
+           document.getElementById("hate").disabled = true;
+     }
+     function disableLove(){
+           document.getElementById("love").disabled = true;
+     }
+   </script>
+    
+ <div align="center" style="margin-top:10px"> 
+      <div class="heart"></div>
+      <button id="love" onclick="showPicture();disableHate()">love</button>
+     <button id="hate" onclick="showPicturee();disableLove()">hate</button>
+ </div>
+   
+   <div align="center">
+     <img  id="bigpic" src="bigpic" style="height:100px;width:200px;display:none;margin-top:25px;" />
+     <img  id="kermit" src="kermit" style="display:none;margin-top:25px;" />
+    </div>
+   
+     
+  </body>
+
+  </html>
+  
+    <footer>
+      This project is for the students of McGill University lunchtime decision anxiety and paralysis. Please submit your favorites 
+      <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeWmjvbgvX7LpWdNMb9mg58pyqJQp1tZQ1NQ9U4XXJutpCGPg/viewform?usp=sf_link">here</a>.
+    </footer>
